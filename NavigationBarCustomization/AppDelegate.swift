@@ -13,7 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        // code for the Navigation Bar:
+        UINavigationBar.appearance().barTintColor = UIColor.yellow
+        UINavigationBar.appearance().tintColor = UIColor.orange
+        
+        // fonts for ios can be found at: http://iosfonts.com/
+        let navigationFont = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
+        let navigationFontAttributes = [NSAttributedString.Key.font: navigationFont]
+        
+        UINavigationBar.appearance().titleTextAttributes = navigationFontAttributes as [NSAttributedString.Key : Any]
+        UIBarButtonItem.appearance().setTitleTextAttributes(navigationFontAttributes as [NSAttributedString.Key : Any], for: .normal)
+        
         return true
     }
 
